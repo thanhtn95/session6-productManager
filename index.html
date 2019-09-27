@@ -54,17 +54,19 @@
         showL();
     }
     function DeleteP(a) {
-        let i = 0;
-        let tmp=[];
-        for( let j =0;j<productList.length;j++){
-            if(j==a){
+        if(confirm("Are you sure ?")){
+            let i = 0;
+            let tmp=[];
+            for( let j =0;j<productList.length;j++){
+                if(j==a){
 
-            }else{
-                tmp.push(productList[j]);
+                }else{
+                    tmp.push(productList[j]);
+                }
             }
+            productList = tmp;
+            showL();
         }
-        productList = tmp;
-        showL();
     }
 
 </script>
